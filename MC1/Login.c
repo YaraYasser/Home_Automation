@@ -1,4 +1,5 @@
 #include "Login.h"
+#include "SPI.h"
 static uint8 checkingForChooseAppearance = 0;
 static uint8 adminPassword[4] = {'0','0','0','0'};
 
@@ -42,6 +43,7 @@ uint8 Login_uint8PasswordVerification(uint8 parMode,uint8 parPassword[4])
 	  LCD_vInit();
 	  LCD_vMoveCursir(0,0);
 	  LCD_vPrintString("Welcome");
+	  
 	  DDRC |= (1<<0);
 	  PORTC |= (1<<0);
 	  return '1';

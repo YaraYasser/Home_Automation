@@ -23,11 +23,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000234  00000000  00000000  0000322c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000626  00000000  00000000  00003460  2**0
+ 10 .debug_str    0000065d  00000000  00000000  00003460  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d12  00000000  00000000  00003a86  2**0
+ 11 .debug_loc    00000d12  00000000  00000000  00003abd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000100  00000000  00000000  00004798  2**0
+ 12 .debug_ranges 00000100  00000000  00000000  000047cf  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1066,6 +1066,7 @@ uint8 Login_uint8PasswordVerification(uint8 parMode,uint8 parPassword[4])
  62a:	8c e9       	ldi	r24, 0x9C	; 156
  62c:	90 e0       	ldi	r25, 0x00	; 0
  62e:	0e 94 ac 02 	call	0x558	; 0x558 <LCD_vPrintString>
+	  
 	  DDRC |= (1<<0);
  632:	a0 9a       	sbi	0x14, 0	; 20
 	  PORTC |= (1<<0);
@@ -1078,7 +1079,7 @@ uint8 Login_uint8PasswordVerification(uint8 parMode,uint8 parPassword[4])
   }
  }
  63a:	08 95       	ret
-	  LCD_vPrintString("Welcome");
+	  
 	  DDRC |= (1<<0);
 	  PORTC |= (1<<0);
 	  return '1';

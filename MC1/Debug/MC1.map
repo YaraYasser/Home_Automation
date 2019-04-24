@@ -20,6 +20,23 @@ Discarded input sections
                 0x00000000       0x62 DIO.o
  .text.DIO_vWriteDataInLCD
                 0x00000000       0x26 DIO.o
+ .text          0x00000000        0x0 EEPROM.o
+ .data          0x00000000        0x0 EEPROM.o
+ .bss           0x00000000        0x0 EEPROM.o
+ .text.EEPROM_vInit
+                0x00000000       0x10 EEPROM.o
+ .text.EEPROM_vRead
+                0x00000000        0xc EEPROM.o
+ .debug_info    0x00000000       0xe2 EEPROM.o
+ .debug_abbrev  0x00000000       0x9a EEPROM.o
+ .debug_loc     0x00000000       0x24 EEPROM.o
+ .debug_aranges
+                0x00000000       0x28 EEPROM.o
+ .debug_ranges  0x00000000       0x18 EEPROM.o
+ .debug_line    0x00000000       0xeb EEPROM.o
+ .debug_str     0x00000000      0x19d EEPROM.o
+ .comment       0x00000000       0x31 EEPROM.o
+ .debug_frame   0x00000000       0x34 EEPROM.o
  .text          0x00000000        0x0 KeyPadDriver.o
  .data          0x00000000        0x0 KeyPadDriver.o
  .bss           0x00000000        0x0 KeyPadDriver.o
@@ -34,6 +51,26 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 SPI.o
+ .data          0x00000000        0x0 SPI.o
+ .bss           0x00000000        0x0 SPI.o
+ .text.SPI_MasterInit
+                0x00000000       0x14 SPI.o
+ .text.SPI_MasterTransmit
+                0x00000000        0xc SPI.o
+ .text.SPI_SlaveInit
+                0x00000000        0x6 SPI.o
+ .text.SPI_SlaveReceive
+                0x00000000        0x8 SPI.o
+ .debug_info    0x00000000       0xe2 SPI.o
+ .debug_abbrev  0x00000000       0x94 SPI.o
+ .debug_aranges
+                0x00000000       0x38 SPI.o
+ .debug_ranges  0x00000000       0x28 SPI.o
+ .debug_line    0x00000000      0x13e SPI.o
+ .debug_str     0x00000000      0x1a7 SPI.o
+ .comment       0x00000000       0x31 SPI.o
+ .debug_frame   0x00000000       0x54 SPI.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -99,10 +136,12 @@ Linker script and memory map
 
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
 LOAD DIO.o
+LOAD EEPROM.o
 LOAD KeyPadDriver.o
 LOAD LCD.o
 LOAD Login.o
 LOAD main.o
+LOAD SPI.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -527,7 +566,7 @@ END GROUP
  .debug_frame   0x000001bc       0x44 Login.o
  .debug_frame   0x00000200       0x34 main.o
 
-.debug_str      0x00000000      0x626
+.debug_str      0x00000000      0x65d
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x2c2 DIO.o
@@ -536,9 +575,9 @@ END GROUP
                                 0x1d9 (size before relaxing)
  .debug_str     0x00000491       0xc9 LCD.o
                                 0x2da (size before relaxing)
- .debug_str     0x0000055a       0x99 Login.o
+ .debug_str     0x0000055a       0xd0 Login.o
                                 0x233 (size before relaxing)
- .debug_str     0x000005f3       0x33 main.o
+ .debug_str     0x0000062a       0x33 main.o
                                 0x245 (size before relaxing)
 
 .debug_loc      0x00000000      0xd12

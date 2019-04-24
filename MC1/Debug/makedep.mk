@@ -4,6 +4,8 @@
 
 DIO.c
 
+EEPROM.c
+
 KeyPadDriver.c
 
 LCD.c
@@ -11,4 +13,6 @@ LCD.c
 Login.c
 
 main.c
+
+SPI.c
 
